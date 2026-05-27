@@ -1,13 +1,41 @@
 <script setup>
-import errorImage from './assets/images/404.svg?raw'
+useHead({
+  title: 'نه',
+  link: [
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap',
+    },
+  ],
+})
 </script>
 
 <template>
-  <NuxtLayout name="default">
-    <a
-      class="w-full h-full max-w-[600px] mx-auto flex items-center justify-center [&_svg]:w-full"
-      href="/"
-      v-html="errorImage"
-    />
+  <NuxtLayout name="blank">
+    <main class="nah-container">
+      <div class="centered-text">
+        <h1>نه</h1>
+      </div>
+    </main>
   </NuxtLayout>
 </template>
+
+<style scoped>
+.nah-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+.centered-text {
+  text-align: center;
+}
+h1 {
+  color: white;
+  font-size: 1000%;
+  margin: 0;
+}
+</style>
