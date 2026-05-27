@@ -5,22 +5,37 @@
 <a href="https://trendshift.io/repositories/10421" target="_blank">
   <img
     src="https://trendshift.io/api/badge/repositories/10421"
-    alt="ccbikai/Sink | Trendshift"
-    style="width: 250px; height: 55px;"
+    alt="miantiao-me/Sink | Trendshift"
     width="250"
     height="55"
   />
 </a>
-<a href="https://news.ycombinator.com/item?id=40843683">
+<a href="https://news.ycombinator.com/item?id=40843683" target="_blank">
   <img
     src="https://hackernews-badge.vercel.app/api?id=40843683"
     alt="Featured on Hacker News"
-    style="width: 250px; height: 55px;"
+    width="250"
+    height="55"
+  />
+</a>
+<a href="https://hellogithub.com/repository/57771fd91d1542c7a470959b677a9944" target="_blank">
+  <img
+    src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=57771fd91d1542c7a470959b677a9944&claim_uid=qi74Zp23wYKeAVB&theme=neutral"
+    alt="Featured｜HelloGitHub"
+    width="250"
+    height="55"
+  />
+</a>
+<a href="https://www.uneed.best/tool/sink" target="_blank">
+  <img
+    src="https://www.uneed.best/POTW1.png"
+    alt="Uneed Badge"
     width="250"
     height="55"
   />
 </a>
 
+[<img src="https://devin.ai/assets/deepwiki-badge.png" alt="DeepWiki" height="20"/>](https://deepwiki.com/miantiao-me/Sink)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F69652?style=flat&logo=cloudflare&logoColor=white)
 ![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=flat&logo=nuxtdotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
@@ -28,16 +43,22 @@
 
 ![Hero](./public/image.png)
 
-----
+---
 
 ## ✨ Features
 
-- **URL Shortening:** Compress your URLs to their minimal length.
-- **Analytics:** Monitor link analytics and gather insightful statistics.
-- **Serverless:** Deploy without the need for traditional servers.
-- **Customizable Slug:** Support for personalized slugs.
-- **🪄 AI Slug:** Leverage AI to generate slugs.
-- **Link Expiration:** Set expiration dates for your links.
+- **🔗 URL Shortening:** Compress your URLs to their minimal length.
+- **📈 Analytics:** Monitor link analytics and gather insightful statistics.
+- **☁️ Serverless:** Deploy without the need for traditional servers.
+- **🎨 Customizable Slug:** Support personalized slugs, UTM parameters, and case sensitivity.
+- **🪄 AI Assistance:** Generate slugs and OpenGraph metadata from page content.
+- **⏰ Link Control:** Set expirations, passwords, and unsafe-link warning pages.
+- **📱 Smart Routing:** Redirect visitors by device or country.
+- **🖼️ Social Preview:** Customize social previews with titles, descriptions, and images.
+- **📊 Real-time Analytics:** Live 3D globe and real-time event logs.
+- **🔲 QR Code:** Generate QR codes for your short links.
+- **📦 Import/Export:** Bulk link migration via JSON and access analytics via CSV.
+- **🌍 Multi-language:** Full i18n support for dashboard and redirect pages.
 
 ## 🪧 Demo
 
@@ -59,7 +80,7 @@ Site Token: SinkCool
 - **Framework**: [Nuxt](https://nuxt.com/)
 - **Database**: [Cloudflare Workers KV](https://developers.cloudflare.com/kv/)
 - **Analytics Engine**: [Cloudflare Workers Analytics Engine](https://developers.cloudflare.com/analytics/)
-- **UI Components**: [Shadcn-vue](https://www.shadcn-vue.com/)
+- **UI Components**: [shadcn-vue](https://www.shadcn-vue.com/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Deployment**: [Cloudflare](https://www.cloudflare.com/)
 
@@ -67,34 +88,21 @@ Site Token: SinkCool
 
 We welcome your contributions and PRs.
 
-- [x] Browser Extension
-      - [Skin Tool](https://github.com/zhuzhuyule/sink-extension)
-- [ ] Raycast Extension
-- [ ] Apple Shortcuts
+- [x] Browser Extension - [Sink Tool](https://github.com/zhuzhuyule/sink-extension)
+- [x] Chrome Extension - [Sink Quick Shorten](https://chromewebstore.google.com/detail/sink-quick-shorten/emlojomjpenjgkaphajcokijobpkejih)
+- [x] Raycast Extension - [Raycast-Sink](https://github.com/foru17/raycast-sink)
+- [x] Apple Shortcuts - [Sink Shortcuts](https://s.search1api.com/sink001)
+- [x] iOS App - [Sink](https://apps.apple.com/app/id6745417598)
 - [ ] Enhanced Link Management (with Cloudflare D1)
 - [ ] Analytics Enhancements (Support for merging filter conditions)
-- [ ] Dashboard Performance Optimization (Infinite loading)
-- [ ] Units Test
-- [ ] Support for Other Deployment Platforms
+- [x] Dashboard Performance Optimization (Infinite loading)
+- [x] API, migration, backup, and redirect tests
 
 ## 🏗️ Deployment
 
-> Video tutorial: <https://www.youtube.com/watch?v=MkU23U2VE9E>
+> Video tutorial: [Watch here](https://www.youtube.com/watch?v=MkU23U2VE9E)
 
-1. [Fork](https://github.com/ccbikai/Sink/fork) the repository to your GitHub account.
-2. Create a [Cloudflare Pages](https://developers.cloudflare.com/pages/) project.
-3. Select the `Sink` repository and the `Nuxt.js` preset.
-4. Configure environment variables.
-   1. `NUXT_SITE_TOKEN` length must exceed **8**.
-   2. `NUXT_CF_ACCOUNT_ID` [find your account ID](https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/).
-   3. `NUXT_CF_API_TOKEN` Create a [Cloudflare API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/). This token requires `Account.Account Analytics` permissions at the very least. [Reference.](https://developers.cloudflare.com/analytics/analytics-engine/sql-api/#authentication).
-
-5. Save and deploy.
-6. Cancel the deployment, navigate to `Settings` -> `Functions`.
-   1. KV namespace bindings. Bind the variable name `KV` to a KV namespace.
-   2. Workers AI Bindings. Bind the variable name `AI` to the Workers AI Catalog. _Optional_
-   3. Analytics Engine bindings. Bind the variable name `ANALYTICS` to the `sink` dataset, and enable [Cloudflare Analytics Engine beta](https://developers.cloudflare.com/analytics/analytics-engine/get-started/) for your account.
-7. Redeploy.
+We currently support deployment to [Cloudflare Workers](./docs/deployment/workers.md) (recommended) and [Cloudflare Pages](./docs/deployment/pages.md).
 
 ## ⚒️ Configuration
 
@@ -103,6 +111,40 @@ We welcome your contributions and PRs.
 ## 🔌 API
 
 [API Docs](./docs/api.md)
+
+## 🤖 AI Skills
+
+Install Sink AI Skills for enhanced coding assistance:
+
+```bash
+npx skills add miantiao-me/sink
+```
+
+## 🧰 MCP
+
+We currently do not support native MCP Server, but we have OpenAPI documentation, and you can use the following method to support MCP.
+
+> Replace the domain name in `OPENAPI_SPEC_URL` with your own domain name.
+>
+> The `API_KEY` is the same as the `NUXT_SITE_TOKEN` in the environment variables.
+
+```json
+{
+  "mcpServers": {
+    "sink": {
+      "command": "uvx",
+      "args": [
+        "mcp-openapi-proxy"
+      ],
+      "env": {
+        "OPENAPI_SPEC_URL": "https://sink.cool/_docs/openapi.json",
+        "API_KEY": "SinkCool",
+        "TOOL_WHITELIST": "/api/link"
+      }
+    }
+  }
+}
+```
 
 ## 🙋🏻 FAQs
 
@@ -113,8 +155,9 @@ We welcome your contributions and PRs.
 1. [**Cloudflare**](https://www.cloudflare.com/)
 2. [**NuxtHub**](https://hub.nuxt.com/)
 3. [**Astroship**](https://astroship.web3templates.com/)
+4. [**Tailark**](https://tailark.com/)
 
 ## ☕ Sponsor
 
-1. [Follow Me on X(Twitter)](https://x.com/0xKaiBi).
-2. [Become a sponsor to on GitHub](https://github.com/sponsors/ccbikai).
+1. [Follow Me on X(Twitter)](https://404.li/x).
+2. [Become a sponsor to on GitHub](https://github.com/sponsors/miantiao-me).
